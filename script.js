@@ -1,3 +1,4 @@
+//* Getting all necessary DOM elements
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 const slide = document.querySelector(".slide");
