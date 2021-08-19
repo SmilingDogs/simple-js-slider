@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__container {
+  width: 70%;
+  margin: auto;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.slide {
+  display: flex;
+  height: 500px;
+}
+img {
+  width: 100%;
+
+}
+.smooth {
+  transition: transform 0.8s ease-in-out;
+}
+/* Next & previous buttons */
+#prev{
+  position: absolute;
+  top: 43%;
+  left: 0;
+  cursor: pointer;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  transition: 0.6s ease;
+  border: none;
+  user-select: none;
+  background-color: transparent;
+}
+
+#next{
+  position: absolute;
+  top: 43%;
+  right: 0;
+  cursor: pointer;
+  padding: 18px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2rem;
+  transition: 0.6s ease;
+  border: none;
+  user-select: none;
+  background-color: transparent;
+}
+
+#prev:hover, #next:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.dots{
+  text-align: center;
+  margin-top: 2%;
+}
+
+.dot{
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  /* transition from one do to the next */
+  transition: background-color 0.6s ease;
+}
+
+/* We create this class with JavaScript. It makes the current dot darker gray */
+.active{
+  background-color: #717171;
+}
