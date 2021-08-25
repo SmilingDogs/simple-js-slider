@@ -79,10 +79,13 @@ img {
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
-  /* transition from one do to the next */
+  /* transition from one dot to the next */
   transition: background-color 0.6s ease;
 }
 
+.dot:hover {
+  cursor: pointer;
+}
 /* We create this class with JavaScript. It makes the current dot darker gray */
 .active{
   background-color: #717171;

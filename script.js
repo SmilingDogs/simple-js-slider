@@ -40,9 +40,9 @@ function scrollToSlide(e) {
   dots.forEach(dot => {
     dot.classList.remove('active')
   })
-  clickedDot = e.target.closest('span')
+  let clickedDot = e.target.closest('span')
   clickedDot.classList.add("active")
-  const indexDot = dots.findIndex(el => el === clickedDot)
+  const indexDot = dots.indexOf(clickedDot)
   counter = indexDot;
-  slide.style.transform = `translateX(-${width * indexDot}px)`
+  slide.style.transform = `translateX(-${width * counter}px)`
 }
